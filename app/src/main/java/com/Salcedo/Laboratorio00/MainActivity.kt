@@ -14,6 +14,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.Salcedo.Laboratorio00.ui.theme.Laboratorio00Theme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.unit.sp
+import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.ui.unit.dp
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +43,20 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+fun FilledButtonExample(onClick: () -> Unit) {
+    Spacer(modifier = Modifier.height(50.dp))
+    Button(onClick = { onClick() }) {
+        Text("Presioname")
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     Laboratorio00Theme {
         Greeting("Amore Salcedo")
-
+        Spacer(modifier = Modifier.height(50.dp))
+        FilledButtonExample(onClick = {})
     }
 }
