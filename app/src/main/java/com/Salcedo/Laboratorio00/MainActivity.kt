@@ -34,8 +34,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
-        Text(text = "Bienvenida, $name!",fontSize = 24.sp )
-        Text(text = "Curso: Programacion en moviles")
+        Text(text = "Hola soy $name!",fontSize = 24.sp )
+        Text(text = "Conociendo Programacion en moviles")
     }
 }
 
@@ -43,7 +43,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     Laboratorio00Theme {
-        Greeting("Amore Salcedo Macedo")
+        Greeting("Amore Salcedo")
 
     }
 }
